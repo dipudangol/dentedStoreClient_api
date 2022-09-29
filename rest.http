@@ -1,0 +1,136 @@
+GET http://localhost:8000/
+
+
+###
+
+
+# ==========Admin API
+###POST NEW ADMIN USER
+POST http://localhost:8000/api/v1/admin-user
+Content-Type: application/json
+
+{
+    "fName":"Dipu",
+    "lName":"Dangol",
+    "email":"d@ad.com",
+    "password":"123456",
+    "confirmPassword":"123456",
+    "phone":"1234567789",
+    "address":"sydney",
+    "dob":"2020-8-18"
+}
+
+
+### http://localhost:3000/admin/verifyemail?c=sasas&e=asasas
+
+
+### request otp for psd reset
+POST http://localhost:8000/api/v1/admin-user/request-password-reset-otp
+Content-Type: application/json
+
+{
+    "email":"a@d.com"
+}
+
+
+### admin user, login 
+POST http://localhost:8000/api/v1/admin-user/login
+Content-Type: application/json
+
+{
+    "email":"a@ddd.com",
+     "password":"123456"
+
+}
+
+###get new accessJWT
+GET  http://localhost:8000/api/v1/admin-user/accessjwt
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhc3NAZC5jb20iLCJpYXQiOjE2NjE3MTU3NDEsImV4cCI6MTY2NDMwNzc0MX0.z26geOzJT5ZKWw-pKXZz22LO0ITT18hF1IWu_r9Gcao
+
+
+###====categories apis===================================
+POST http://localhost:8000/api/v1/category
+Content-Type: application/json
+
+{
+    "status":"inactive",
+    "name":"Books fiction",
+    "parentId":"6307d13a003890def15f5c64"
+
+}
+
+###get categoies
+
+GET http://localhost:8000/api/v1/category
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAZGRkLmNvbSIsImlhdCI6MTY2MTYzOTk4NCwiZXhwIjoxNjYxNjQwODg0fQ.luodQ6AtrJvkmR8ASLIA41amtXjOSp3RhCJDIvVxQfY
+
+###delete categories
+DELETE http://localhost:8000/api/v1/category/630530c9f4d3a3cd3f8539c7
+
+
+###==============================payment================================
+GET http://localhost:8000/api/v1/payment-method
+
+###post payment
+POST http://localhost:8000/api/v1/payment-method
+Content-Type: application/json
+
+{
+    
+    "status": "active",
+    "name": "pay by cash or eftpos",
+    "description": "follow instruction as given"
+}
+
+
+
+###update payment
+PUT http://localhost:8000/api/v1/payment-method
+Content-Type: application/json
+
+{
+    "_id":"630d1d189850df4d462d2ae2",
+    "status": "active",
+    "name": "pay by PAYID",
+    "description": "follow instruction as given"
+}
+
+###delete payment
+DELETE http://localhost:8000/api/v1/payment-method/630d1ea8c4086107e7cae4f4
+
+
+
+### ======================================================Product apis======================================================
+GET http://localhost:8000/api/v1/product
+
+        
+### post product
+POST http://localhost:8000/api/v1/product
+Content-Type: application/json
+
+{
+    "name":"laptop",
+    "sku":"smac-1s4",
+    "description":"some detail about products",
+    "qty":100,
+    "price":3000,
+    "salesPrice":0,
+    "salesStartDate":null,
+    "salesEndDate":null,
+    "catId":"63053099f4d3a3cd3f8539c5"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+###==========================oder api================
+GET  http://localhost:8000/api/v1/order/11
