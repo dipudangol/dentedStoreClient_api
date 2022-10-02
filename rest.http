@@ -1,4 +1,4 @@
-GET http://localhost:8000/
+GET http://localhost:8001/
 
 
 ###
@@ -49,7 +49,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhc3NAZC5jb20i
 
 
 ###====categories apis===================================
-POST http://localhost:8000/api/v1/category
+POST http://localhost:8001/api/v1/category
 Content-Type: application/json
 
 {
@@ -61,8 +61,8 @@ Content-Type: application/json
 
 ###get categoies
 
-GET http://localhost:8000/api/v1/category
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAZGRkLmNvbSIsImlhdCI6MTY2MTYzOTk4NCwiZXhwIjoxNjYxNjQwODg0fQ.luodQ6AtrJvkmR8ASLIA41amtXjOSp3RhCJDIvVxQfY
+GET http://localhost:8001/api/v1/category
+# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAZGRkLmNvbSIsImlhdCI6MTY2MTYzOTk4NCwiZXhwIjoxNjYxNjQwODg0fQ.luodQ6AtrJvkmR8ASLIA41amtXjOSp3RhCJDIvVxQfY
 
 ###delete categories
 DELETE http://localhost:8000/api/v1/category/630530c9f4d3a3cd3f8539c7
@@ -101,7 +101,7 @@ DELETE http://localhost:8000/api/v1/payment-method/630d1ea8c4086107e7cae4f4
 
 
 ### ======================================================Product apis======================================================
-GET http://localhost:8000/api/v1/product
+GET http://localhost:8001/api/v1/product
 
         
 ### post product
